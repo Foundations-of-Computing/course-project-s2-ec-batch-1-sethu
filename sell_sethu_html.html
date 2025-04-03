@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sell | Sethu</title>
+    <link rel="stylesheet" href="sell_sethu_css.css"> <!--Linking CSS-->
+   
+</head>
+
+<body>
+
+<div class="container">
+
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <header>
+        <h2>SELL</h2>
+    </header>
+
+    <br>
+
+    <main>
+
+        <form id="PorS">
+
+            <label for="types">Select Business Type:</label>    <!-- Select whether Product or Service -->
+            <select id="types" onchange="showhat()">
+                <option value="">-- Select --</option>
+                <option value="product">Product</option>
+                <option value="service">Service</option>
+            </select>
+   
+            <div id="pfields" style="display: none;">     <!-- Name & Description of the product -->
+                <label for="pname">Product Name:</label>
+                <input type="text" id="pname">
+                <label for="pdescription">Product Description:</label>
+                <textarea id="pdescription"></textarea>
+            </div>
+   
+            <div id="sfields" style="display: none;">     <!-- Name & Details of the service -->
+                <label for="sname">Service Name:</label>
+                <input type="text" id="sname">
+                <label for="sdetails">Service Details:</label>
+                <textarea id="sdetails"></textarea>
+            </div>
+   
+            <button id="b1" type="button" onclick="inserter()">Register</button>    <!-- Button to register -->
+   
+        </form>
+
+    <br>
+
+        <h2>Registered Businesses</h2>
+   
+        <table>
+
+            <thead>
+
+                <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                </tr>
+
+            </thead>
+                <tbody id="lists">
+            </tbody>
+
+        </table>
+
+    </main>    
+
+</div>
+
+    <script src="sell_sethu_js.js"></script> <!--Linking JS-->
+
+</body>
+
+</html>
